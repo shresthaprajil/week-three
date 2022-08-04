@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState} from "react";
+import {DashboardPage} from "./pages";
+import UserContext from "./context/UserContext";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [rootState, setRootState] = useState({
+        name: 'Prajil Shrestha',
+        age: 24,
+        email: 'praji.shrestha@islingtoncollee.edu.np',
+        image: 'https://picsum.photos/id/237/200/300'
+    })
+
+    return (
+        <div className="App">
+            <UserContext.Provider value={{user: rootState, setRootState}}>
+                <DashboardPage userData={rootState} setRootState={setRootState}/>
+            </UserContext.Provider>
+        </div>
+    );
 }
 
 export default App;

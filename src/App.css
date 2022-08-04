@@ -1,38 +1,69 @@
 .App {
-  text-align: center;
+    height: 100%;
+    width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dashboard-wrapper {
+    height: 100%;
+    width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.footer {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    border-top: 1px solid gray;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    border-bottom: 1px solid gray;
 }
 
-.App-link {
-  color: #61dafb;
+.body-wrapper {
+    display: flex;
+    height: 80%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.body-main {
+    width: 80%;
+}
+
+.sidebar {
+    text-align: center;
+    height: 100%;
+    width: 20%;
+    border-right: 1px solid gray;
+}
+
+.profile-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.user-detail {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-details {
+    display: flex;
+    flex-flow: column;
+    width: 80%;
+    font-size: 12px;
+}
+
+.form-elem {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 }
